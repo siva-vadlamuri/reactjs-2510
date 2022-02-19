@@ -1,0 +1,20 @@
+Never touch the DOM
+
+Before hooks or react 16.8 or 2019
+What is the difference between class and function components 
+1) class components users ES6 classes and function components are normal javascript function which returns JSX
+2) class components are statefull component and function components are also called as stateless components  
+3) class components has life cycle methods (mounting,updating,unmounting,error handling) 
+
+4) Passing the data to function components as props to display static
+
+
+--> As there drawbacks in class based components, they released hook 
+
+--> The state and life cycle methods are introduced in function components
+
+
+History of React 
+they introduced react in facebook feed  2011
+in 2012 they made some pages in instagram 
+in 2013 they released react as a open source 
