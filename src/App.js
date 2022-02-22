@@ -1,11 +1,12 @@
 import React from "react";
-import Counter from "./hooks/Counter";
-
+// import ReducerHook from "./hooks/ReducerHook";
+import ReducerHook from "./hooks/ReducerHook";
 function App() {
   return (
     <div>
       {" "}
-      <Counter />{" "}
+      {/* <Counter />{" "} */}
+      <ReducerHook />
     </div>
   );
 }

@@ -31,6 +31,16 @@ const Counter = ()=>{
 
     // combo of componentDidMount and componentDidUpdate
     // when the componentDidUpdate,
+
+    // useEffect will be called every time when the state or props is updated
+useEffect(()=>{
+
+})
+
+// useEffect(()=>{
+
+// },[])
+
     useEffect(()=>{
        getTheUser()
     },[count])
