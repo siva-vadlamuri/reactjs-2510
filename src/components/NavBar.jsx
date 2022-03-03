@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function NavBar() {
-    const navLinks = ['Home','ContactUs','AboutUs','Blog']
+    const navLinks = ['Home','ContactUs','AboutUs','Blog','Cart']
   return (
     <ul className="navbar-nav">
         {

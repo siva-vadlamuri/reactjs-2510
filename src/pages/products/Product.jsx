@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../../redux/ProductActions/ProductActions";
 import FakeStoreApi from "../../_api/FakeStoreApi";
+
+
 
 function Product() {
   const { id } = useParams();
+  const dispatch = useDispatch()
+  const productState = useSelector((state)=>state)
+  console.log(productState)
   const [productDetail, setProductDetail] = useState({});
 
   const getTheProductDetailPage = async () => {
@@ -40,7 +47,8 @@ function Product() {
                 <p className="p-2">{productDetail.description}</p>
             </section>
             <section className="product__add_to_cart mt-3">
-                <button className="btn btn-info px-3 py-2 text-light">Add to cart</button>
+              {console.log(addToCart(productDetail))}
+                <button className="btn btn-info px-3 py-2 text-light" onClick={()=>{dispatch(addToCart(productDetail))}}>Add to cart</button>
             </section>
           </section>
         </section>

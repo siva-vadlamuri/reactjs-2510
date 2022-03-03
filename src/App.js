@@ -4,6 +4,7 @@ import ReducerHook from "./hooks/ReducerHook";
 import Products from "./pages/products/Products";
 import { Routes, Route } from "react-router-dom";
 import Product from "./pages/products/Product";
+import Cart from "./pages/cart/Cart";
 function App() {
   return (
     <div>
@@ -11,6 +12,7 @@ function App() {
       {/* header */}
       {/* main  */}
       <Routes>
+        <Route path="Cart" element={<Cart />} />
         <Route path="/" element={<p>Home Page Works</p>} />
         <Route path="products" element={<Products />} />
         <Route path="product/:id" element={<Product />} />
