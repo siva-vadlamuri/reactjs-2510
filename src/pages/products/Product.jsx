@@ -3,6 +3,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addToCart } from "../../redux/ProductActions/ProductActions";
 import FakeStoreApi from "../../_api/FakeStoreApi";
+import loader from '../../assets/images/loader.gif'
 
 
 
@@ -22,7 +23,8 @@ function Product() {
   }, []);
   return (
     <section className="container">
-      <section className="row border border-primary mt-2">
+      
+      { Object.keys(productDetail).length>0?(<section className="row border border-primary mt-2">
         <section className="col-md-6 pt-3">
           <section className="productDetail__img_section">
             <img
@@ -52,7 +54,10 @@ function Product() {
             </section>
           </section>
         </section>
-      </section>
+      </section>):<section>
+               <img src={loader} alt="Loader Image"/>
+        </section> }
+      
     </section>
   );
 }
